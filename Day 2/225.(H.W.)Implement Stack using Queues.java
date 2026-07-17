@@ -1,14 +1,11 @@
 import java.util.LinkedList;
 import java.util.Queue;
-
 class MyStack {
 
     private Queue<Integer> queue;
-
     public MyStack() {
         queue = new LinkedList<>();
     }
-    
     public void push(int x) {
         queue.add(x);
         int size = queue.size();
@@ -16,15 +13,12 @@ class MyStack {
             queue.add(queue.remove());
         }
     }
-    
     public int pop() {
         return queue.remove();
     }
-    
     public int top() {
         return queue.peek();
     }
-    
     public boolean empty() {
         return queue.isEmpty();
     }
